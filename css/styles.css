@@ -1075,7 +1075,7 @@ img.hover-shadow {
 /*PAGE GLOW 4*/
 .glow-page {
   background-image: url('https://www.vrogue.co/top-featureds-i.pinimg.com/originals/ea/82/ec/ea82ec2b311e68340d2edf54380cef76.gif');
-  box-shadow:
+  ox-shadow:
   inset 0 47em 3em rgb(0 0 0 / 55%), 0 0 0 2px black,/*внетреннее затемнение боди*/
    0.0em 0.0em 0em rgb(0 0 0 / 0%);/*внешняя тень боди. здесь она не нужна. 
    можно делать для фоток. смотреть оригинал - https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow*/
