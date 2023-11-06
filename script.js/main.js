@@ -143,3 +143,49 @@ cardOf.addEventListener('click', () => {//function show
   alert('hi');// просто для проверки работы кода
 });*/
 /////////
+
+//Скрипт для летающего Деда Мороза. Не помню работает или нет
+/*let step = 0;
+document.getElementsByTagName("img")[0];
+const img = document.querySelector('.flying_santa');
+img.addEventListener('mousemove', /*function front* (event) => {
+//step = 5;  
+img.classList.toggle('img--mymove');
+img.style.animationIterationCount= 5;// колличество раз
+img.style.cursor = "pointer";
+img.style.animationDelay = "5s"; //время через сколько запустится анимация
+event.stopPropagation();//чтоб событие не всплывало
+//requestAnimationFrame(front); из мод 23.6, хотел попробовать менее весомую функцию, пока не работает
+});
+//requestAnimationFrame(front);*/
+
+//const img = document.querySelector('.flying_santa');
+/*flying_santa.mousemove = function() {
+  this.mousemove = null; // анимация должна начинаться только после первого клика
+  let times = 1;
+
+  function goo() {
+    if (times % 2) {
+      // плыть вправо
+      flying_santa.classList.remove('back');
+      flying_santa.style.Left = 100 * times + 200 + 'px';
+    } else {
+      // плыть влево
+      flying_santa.classList.add('back');
+     flying_santa.style.Left = 100 * times - 200 + 'px';
+    }
+
+  }
+  goo();
+
+  flying_santa.addEventListener('transitionend', function() {
+    times++;
+    goo();
+  });
+};
+
+.back {
+  transform: scaleX(-1);
+  filter: fliph;
+}
+transition: left 3s ease-in-out;*/

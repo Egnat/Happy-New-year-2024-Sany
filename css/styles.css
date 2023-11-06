@@ -514,6 +514,14 @@ a:-webkit-any-link {
   background-color: transparent;
 } /*нужно так прописать если в многостраничном сайте на некоторых стр хедер меняет цвет*/
 
+.showflake {
+  position: absolute;
+  top: 202px;
+  left: 127px;
+  z-index: 1;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+    
 .h1-home-page{
   padding-top: 30p;
   font-size: 120px;
