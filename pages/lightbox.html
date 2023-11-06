@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="theme-color" content="#000000">
+<!--<link rel="icon" href="%PUBLIC_URL%/favicon.ico">-->
+<link rel="icon" type="image/png" href="../images/99px_ru_animacii_20389_ded_moroz_pozdravljaet_s_novim_godom.gif">
+<!--<link rel="icon" type="image/png" href="images/faviconradioact.png">-->
+<!--<link rel="stylesheet" type="text/css" href="public/css/styles.css">эта ссылка работает, когда не в реакте, не в локахосте. (public/css/styles.css) или (css/styles.css) href="src/App.css"> тоже работает в любом штмл, без разницы-->
+<!--<link rel="stylesheet" type="text/css" href="public/font.css/fonts.css">описание в файле фонтс.цсс-->
+<link rel="stylesheet" media="screen and (max-width: 1300px)" href="../css/styles.css"><!--src/App.css css/styles--><!--scss/base.css"-->
+<!--<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
+<script src="http://thecode.local/wp-content/uploads/2019/06/jquery.js" type="text/javascript"></script>
+<script src='http://thecode.local/wp-content/uploads/2019/06/jqueryhighlight.js'>
+  </script>-->
+<link rel="stylesheet" type="text/css" href="../css/styles.css"><!-- вместо App.css нужно создать для файлов штмл, лежащих в папке пэйджес, файл стайлес.цсс, в данном примере он размещён в папке цсс. Если собирать проект не в реакте, то нужно делать, как в модуле 1.12 Скиллфектори. Сохранено на флэшке-->
+<!--<script type="text/javascript">alert("Привет !!! Поздравляю ! ");</script>-->
+
+<!--При подключении в локахост сбивается мой скрипт Взял у ментера Даши из видео Скиллфэктори, практические вебинары-->
+<!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>-->
+    <title>☢ Анимационные фото - 3 in 1 Pages</title>
+<!--<style>
+  @import url('.App.css');
+ </style>-->
+</head>
+<body class="photo-page">
+ <section class="wrapper">
+    <header class="header header-page-photo" id="header">
+      <div class="continerPj" id="continerPj">
+        <div class="header__continer_content">
+          <figure class="header__filter-logo">
+            <a class="logo-link-home" href="../index.html">
+              <img class="img-logo logo-photo-page"src="http://3rebenka.ru/wp-content/uploads/nygif/Advent107.gif" alt="Новогодний винок">
+            </a>
+              <!--<figcaption>Pumpkin Farm logo</figcaption> Garland http://3rebenka.ru/wp-content/uploads/nygif/xmas1465.gif-->
+          </figure>
+          <nav class="header__menu">
+             <ul class="menu__list">
+                <!--<li class="menu__list-item"><a class="menu__list-link" href="../index.html">Главная</a></li>-->
+               <li class="menu__list-item"><a class="menu__list-link" href="congratulations.html">Congratulation</a></li><!--для штмл в корневой папке-->
+               <li class="menu__list-item"><a class="menu__list-link" href="#"><span style="color:rgb(255, 255, 255)">Photo</span></a></li>
+               <li class="menu__list-item"><a class="menu__list-link" href="glow-text.html">glow</a></li>
+             </ul>
+          </nav>
+            <div class="social">
+               <picture class="dropdownShevron">
+                <img onclick="myFunction()" class="imgDropShevron icon" src="../images/mdi_phone-red.svg" alt="Phone">
+                <div id="myDropdown" class="dropdownShevron-content">
+                 <p class="phone-dropdoun">+38 (050) 645 55 55 Viber</p>
+                 <p class="phone-dropdoun">+7 (978) 625 12 92</p>
+                  <!--<a class="linkDropdownShevron-content" href="#">Link 1</a>
+                  <a class="linkDropdownShevron-content" href="#">Link 2</a>
+                  <a class="linkDropdownShevron-content" href="#">Link 3</a>-->
+                </div>
+               </picture>
+               <a class="link-soc" href="https://t.me/Sergey_p_i" target="_blank" title="Страница с информацией откроется в новой вкладке 👋">
+                 <img class="icon" src="../images/icomoon-free_telegram-red.svg" alt="iconsTelega"></img>
+                 <!--<p class="p">Telega</p>-->
+               </a>
+               <a class="link-soc" href="https://www.instagram.com/sergey_100879_/" target="_blank" title="Страница с информацией откроется в новой вкладке 👋">
+                  <img class="icon" src="../images/ri_instagram-fill-red.svg" alt=" Insta">
+                  <!--<p class="p">Insta</p>-->
+               </a>
+               <a class="link-soc" href="https://www.facebook.com/profile.php?id=100011608800659" target="_blank" title="Страница с информацией откроется в новой вкладке 👋">
+                <img class="icon" src="../images/et_facebook-red.svg" alt=" Facebook">
+                <!--<p class="p">Insta</p>-->
+             </a>
+              </div>
+               <!--<a class="button-link" href="https://www.facebook.com/profile.php?id=100011608800659" target="_blank" title="Страница откроется в новой вкладке">Contact</a>-->
+        </div>
+      </div>
+    </header>
+    <!--<header>
+        <a href="../index.html">Главная</a>
+        <a href="#">О нас</a>
+        <a href="contacts.html">Контакты</a>
+    </header>-->
+    <main class="main">
+      <section class="one" id="one">
+        <div class="continerPj" id="continerPj">
+          <div class="main__continer_content">
+               <!-- Images used to open the lightbox -->
+               <div class="row">
+                 <div class="column">
+                  <img src="https://3d-galleru.ru/cards/0/40/r152t47keksbj48/s-novym-godom-novym-godom-animaciya.gif" onclick="openModal();currentSlide(1)" class="hover-shadow">
+                 </div>
+                 <div class="column">
+                   <img src="https://postila.ru/resize?w=660&src=%2Fdata%2F6a%2F36%2F41%2F1f%2F6a36411f1b83c8df53e61299498fb2aa19f62bcb2f464d8335a2ff675b94a1d8.gif" onclick="openModal();currentSlide(2)" class="hover-shadow">
+                 </div>
+                 <div class="column">
+                  <img src="http://muzotkrytka.narod.ru/NG/flash/ng2021-5.gif" onclick="openModal();currentSlide(3)" class="hover-shadow">
+                 </div>
+                 <div class="column">
+                   <img src="https://kartinki-life.ru/articles/2019/12/14/otkrytki-mercaushhie-animacionnye-gif-s-novym-godom-22-20.gif" onclick="openModal();currentSlide(4)" class="hover-shadow">
+                 </div>
+                </div>
+
+                <!-- The Modal/Lightbox -->
+                <div id="myModal" class="modal">
+                  <span class="close cursor" onclick="closeModal()">&times;</span>
+                <div class="modal-content">
+
+                <div class="mySlides"style="height:500p">
+                  <div class="numbertext">1 / 4</div>
+                  <img src="https://3d-galleru.ru/cards/0/40/r152t47keksbj48/s-novym-godom-novym-godom-animaciya.gif" style="width:100%; height:590px;">
+                </div>
+
+                <div class="mySlides" style="height:537p">
+                  <div class="numbertext">2 / 4</div>
+                  <img src="https://postila.ru/resize?w=660&src=%2Fdata%2F6a%2F36%2F41%2F1f%2F6a36411f1b83c8df53e61299498fb2aa19f62bcb2f464d8335a2ff675b94a1d8.gif" style="width:100%; height:590px;">
+                </div>
+
+                <div class="mySlides"style="height:500p">
+                  <div class="numbertext">3 / 4</div>
+                  <img src="http://muzotkrytka.narod.ru/NG/flash/ng2021-5.gif" style="width:100%; height:590px;">
+                </div>
+
+                <div class="mySlides"style="height:500p">
+                  <div class="numbertext">4 / 4</div>
+                  <img src="https://kartinki-life.ru/articles/2019/12/14/otkrytki-mercaushhie-animacionnye-gif-s-novym-godom-22-20.gif" style="width:100%; height:590px;">
+                </div>
+
+                <!-- Next/previous controls -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                <!-- Caption text -->
+                <div class="caption-container">
+                   <p id="caption"></p>
+                 </div>
+
+                <!-- Thumbnail image controls -->
+               <section class="columns">
+                <div class="column">
+                  <img class="demo" src="https://3d-galleru.ru/cards/0/40/r152t47keksbj48/s-novym-godom-novym-godom-animaciya.gif" onclick="currentSlide(1)" alt=""><!--Можно дописать alt="Привет" Тогда будет текст под большой фоткой-->
+                </div>
+
+                <div class="column">
+                  <img class="demo" src="https://postila.ru/resize?w=660&src=%2Fdata%2F6a%2F36%2F41%2F1f%2F6a36411f1b83c8df53e61299498fb2aa19f62bcb2f464d8335a2ff675b94a1d8.gif" onclick="currentSlide(2)" alt="">
+                </div>
+
+                <div class="column">
+                  <img class="demo" src="http://muzotkrytka.narod.ru/NG/flash/ng2021-5.gif" onclick="currentSlide(3)" alt="">
+                </div>
+
+                <div class="column">
+                  <img class="demo" src="https://kartinki-life.ru/articles/2019/12/14/otkrytki-mercaushhie-animacionnye-gif-s-novym-godom-22-20.gif" onclick="currentSlide(4)" alt="">
+                 </div>
+               </section> 
+              </div>
+            </div>
+          </div>
+        </div>
+     </section>   
+    </main>
+    <footer class="footer" id="footer">
+      <script type="text/javascript" src="../script.js/main.js"></script>
+      <script type="text/javascript" src="../library-jq.js/main-jq.js"></script>
+     <!--<span>&copy;&nbsp;Serega</span>-->
+    </footer>
+  </section>
+  <script>
+    $(document).ready(function() {    
+      $("body").css("opacity", "1");
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,1177 @@
+/*Остался с реакта
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+*/
+/*Новогодние шрифты
+Snowinter: Этот шрифт имеет зимнюю тематику, снежные элементы и яркий стиль.
+
+Christmas Bell: Шрифт с изображением колоколов и рождественских украшений, который создает праздничную атмосферу.
+
+Candy Cane: Шрифт, имитирующий конфетное палочки, идеально подходит для создания сладких и праздничных дизайнов.
+
+Jingle Bells: Этот шрифт вдохновлен песней "Jingle Bells" и содержит изображения колоколов и звездочек.
+
+Gingerbread: Шрифт, напоминающий пряники или имитирующий печенье имбирного пряника, отлично подходит для создания теплой и уютной новогодней атмосферы.
+
+Christmas Lights: Шрифт с изображением рождественских огней, который добавляет яркости и настроения к вашим дизайнам.
+
+Frosty: Этот шрифт имеет ледяной, замороженный стиль и идеально подходит для новогодней и зимней тематики.
+
+Santa's Sleigh: Шрифт с изображением саней Санта-Клауса и рождественских элементов, который создает праздничное настроение.
+
+Holiday Spirit: Шрифт с веселыми и украшенными буквами, которые отражают праздничный дух и радость.
+
+North Pole: Этот шрифт вдохновлен сказочным миром Северного полюса и создает атмосферу волшебства и приключений.
+
+Вы можете найти эти шрифты и другие новогодние шрифты на различных веб-сайтах с бесплатными шрифтами, таких как Google Fonts, DaFont или Font Squirrel. **/
+/*
+@import url('https://fonts.googleapis.com/css?family=Asap');*/
+
+/*@font-face {
+  src: url("fonts/Pacifico.ttf");нужно скачать шрифт в папку fonts, в моём проекте
+  font-family: "Pacifico",cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-display: fallback;
+}*/
+
+/*можно не скачивая шрифт в папку фонтс своего проект, пользоваться им с помощью 
+ссылки. Прописав его у боди, задаём этот шрифт всем элементам 
+body: font-family: "Bitstream Vera Serif Bold";
+@font-face {
+font-family:"Bitstream Vera Serif Bold";
+src:url(https://mdn.github.io/css-examples/web-fonts/VeraSeBd.ttf)
+}*/
+
+/*code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace; нужен код если файл фонт.цсс подключён, тут отключён.
+     Подключён индекс.цсс с кодом для проверки шрифтов у пользователя на компе
+}*/
+
+::-webkit-scrollbar {
+width:.1px;
+height:5px;
+pacity:.02
+}
+
+::-webkit-scrollbar-button {
+height:50px;
+background:#42e10e
+}
+
+::-webkit-scrollbar-track {
+background:#274dd7
+}
+
+::-webkit-scrollbar-track-piece {
+background:#e91e63
+}
+
+::-webkit-scrollbar-thumb {
+background:#fbe100;
+border-radius:10px;
+-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.3)
+}
+
+/*@font-face {
+src:url(fonts/Yeseva.ttf);
+font-family:"Yeseva+One"
+}*/
+
+.continerPj {
+  max-width: 1200px;/*лучше писать здесь max-width, чем width https://www.youtube.com/watch?v=AvMusILfIdQ*/
+  margin: 0 auto;
+}
+
+.btn {
+  min-width: 170px;
+  height: 100%;
+  background-color: white;
+  border:none;
+  color: blue;
+}
+
+html {
+box-sizing:border-box;
+min-width:1200px;
+height:auto;
+scroll-behavior: smooth;/*для плавного скрола по секцим страницы страницы*/
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+*, *::after, *::before {
+box-sizing:inherit;
+padding: 0;
+margin: 0;
+}
+
+body {
+  /*
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; Можно подключить здесь, 
+  а можно в индекс.цсс и подключить его в хэде штмл*/
+ox-sizing:border-box;
+width: 1280p;
+height: 1300p;/*чтобы линар не собирался в гармошку, нужно установить высоту, сейчвс отключена и линар тоже*/
+in-height: 100%;
+background-image:url(https://highstar.ru/pictures/snejinki/09.gif);/*путь с цсс к картинке (../images/abstractfirebloom.png);*/
+background-attachment:fixed;
+background-size:cover;
+ackground-color: #610377;
+ackground:linear-gradient(180deg,#F3CE0D 0%,rgba(255,153,0,0.38) 92.71%,rgba(255,184,0,0.37) 99.99%,rgba(255,255,255,0) 100%);
+font-family:'Montserrat', Arial, sans-serif;
+font-size: 16px;
+font-weight: 400;
+line-height: 1.2;
+opacity:0;transition:.5s;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.header {
+  background-color:transparent;
+}
+
+.header__continer_content {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ max-width: 1200px;
+ max-width: 100%;
+ padding-top: 30px;
+ padding-bottom: 30px;
+}
+
+button-link {/*это стили для кнопки - ссылки, она отключена в штмл и стили тоже отключил*/
+display: block;
+width: 170px;
+  padding: 10px 20px;
+  background-color:rgb(0 26 225);
+  color: #d6d6d6;
+  font-family: 'Unbounded', Arial, sans-serif;
+  font-size: 15px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  order: 1p solid rgb(0, 38, 252);
+  border-radius: 4p;
+}
+
+/*CARDOFF*/
+.cardOfFFilterArticle, .cardOfffGlowText {
+  display: flex;
+  justify-content: center;
+  idth: auto;
+  padding: 10px 20px;
+  background-color:rgb(0 26 225);
+  color: #ffffff;
+  font-family: 'Unbounded', Arial, sans-serif;
+  font-size: 15px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  order: 1p solid rgb(0, 38, 252);
+  border-radius: 4p;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.cardOfFFilterArticle:hover {
+  background-color: red;
+  color: blue;
+}
+
+.filter-p-article__cardOff {
+  position: absolute;
+  display: none;
+  max-width: 254px;
+  background-color: #f1f1f1;
+  bottom: 508px;
+  left: 1033px;
+  margin: 0;
+  filter: brightness(1.0);
+}
+
+.p-article__cardOff {
+  max-width: 254px;
+  padding: 15px 15px;
+  text-align: center;
+}
+
+.imgHeader-2 {
+  width:600p;
+ height:139px;
+ ackground:linear-gradient(89.08deg,rgba(253,253,253,0) -1.63%,rgba(0,0,0,0.35) 50.55%,rgba(255,255,255,0.74) 91.26%);
+ box-shadow:0 3px 34px 0 #17cf1578 
+ }
+ /*/CARDOFF*/
+
+.header__filter-logo {
+  filter: brightness(1.0);
+}
+
+.logo-home-page {
+  height: 100px;
+}
+
+.header__menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500p;
+  padding-left: 190p;
+  argin: 0 auto;
+  ist-style:none;
+}
+
+.menu__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+font-size:15px;
+list-style-type:none;
+font-family:"Unbounded",Arial,sans-serif;
+font-style:normal;
+font-weight:400;
+line-height:15px;
+list-style-type:none;/*убирает точки у списка*/
+text-transform:uppercase;
+color:#fff;
+gap:25px;
+/*text-decoration: line-through - используется для перечеркивания текста;
+underline - подчеркивает текст;
+overline - используется для помещения линии над текстом (надчеркнутый текст);
+blink - тест мигает (каждую секунду);
+none - позволяет отменить все эффекты, примененные к тексту.*/
+}
+
+.menu__list-item {
+padding-right: 25p;
+animation: 0.7s;
+}
+
+.menu__list-link {
+color:#f00;
+text-decoration-line:none;/*убирает подчёркивание у ссылок*/
+animation: 0.7s;
+}
+
+/*DROPDOUN*/
+.dropdownShevron {
+  osition: absolute;
+  display: inline-block;
+  top: 24px;
+  left: 737px;
+  cursor: pointer;
+}
+
+.imgDropShevron {
+  width:20p;
+  left:754p
+}
+
+.dropdownShevron-content {
+  display:none;
+  position:absolute;
+  background-color:#f1f1f1;
+  min-width:160px;
+  box-shadow:0 8px 16px 0 rgba(0,0,0,0.2);
+  z-index:1
+}
+
+.dropdownShevron-content .linkDropdownShevron-content {
+  color:#000;
+  padding:12px 16px;
+  text-decoration:none;
+  display:block
+}
+
+.dropdownShevron-content .linkDropdownShevron-content:hover {
+  background-color:#ddd
+  }
+
+  .phone-dropdoun {
+  padding:15px;
+  text-decoration:underline;
+  color:black;
+  }
+  
+  .show {
+  display:block;
+  margin-top: 24px;
+  }
+/*/DROPDOUN*/
+
+.social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 145p;
+  color: white;
+  font-size: 15px;
+ font-family:"Unbounded",Arial,sans-serif;
+font-style:normal;
+font-weight:400;
+line-height:15px;
+gap: 25px;
+}
+
+.link-soc {
+  display: inline-block;
+  color: white;
+  text-decoration-line:none;/*убирает подчёркивание у ссылок*/
+}
+
+.p {
+margin: 0;
+}
+
+/*SIDEBAR*/
+/*.w3-sidebar w3-bar-block w3-card w3-animate-right {
+ display: flex;
+lex-direction: column;
+ustify-content: space-between;
+lign-items: center;
+}*/
+
+.w3-sidebar {
+  position: fixed !important;/*!important*/
+  height: 100%;
+  width: 600p;
+  background-color: #1ed80d;
+  z-index: 1;
+  overflow: auto;
+  -webkit-animation-name: slowing;
+  -webkit-animation-duration: 1.5s;
+  animation-name: slowing;
+  animation-duration: 1.5s;
+  ransition: opacity .4s ease;/* Плавное появление у кнопок слайдера
+  или фото. Сюда не подходит.*/
+}
+
+@keyframes slowing {
+  from {opacity: .2} 
+  to {opacity: 1}
+  }
+
+.w3-animate-righ {
+  position: relative;
+  /*-webkit-animation-name: slowing;
+  -webkit-animation-duration: 1.5s;
+  animation-name: slowing;
+  animation-duration: 1.5s;*/
+   animation:animateright 0.4s;
+  ransition: visibility 0.5s, opacity 0.5s ease-in-out;
+}
+
+.w3-card, .w3-card-2 {
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+}
+
+button, select {
+  width: 30px;
+  background-color: #f00;
+  color: whitesmoke;
+  text-transform: none;
+  cursor: pointer;
+}
+
+.w3-bar-block .w3-bar-item {/*Closed*/
+  width: 100%;
+  display: block;
+  padding: 8px 16px;
+  text-align: left;
+  border: none;
+  white-space: normal;
+  float: none;
+  outline: 0;
+  background-color: #610377;
+}
+
+button, input, select, textarea, optgroup {
+  font-size: 20px;
+  margin: 0; 
+}
+
+.w3-button:hover {
+  color: rgb(250, 0, 0);
+  background-color: blue;/*!important*/
+}
+/*Это сайдбар без стилей для гамбургера, расположенных ниже
+. Они отключены. Справился без них,/SIDEBAR*/
+
+/*Стили для ссылок, отключены, потому что отключил ссылки сайдбара в штмл
+a:-webkit-any-link {
+  color: gray;
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-line:none;
+}*/
+/*Добавил стили гамбургеру, не знаю нужно или нет*
+.w3-btn, .w3-button {
+  border: none;
+  display: inline-block;
+  padding: 8px 16px;
+  vertical-align: middle;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  background-color: inherit;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.w3-btn, .w3-button {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.w3-xlarge {
+  font-size: 24px!important;
+}
+.w3-right {
+  float: right!important;
+}
+*Gamburger*/
+/*Это весь сайдбар из примера/SIDEBAR*/
+
+.filter__img-sidebar {
+  margin: 0;
+  filter: brightness(1.0);
+}
+
+.img-sidebar {
+  height: 392px;
+}
+
+.subtitle-h2 {
+  padding-top: 20p;
+  padding-left: 20px;
+  font-family: 'Snowinter', Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-size: 48px;
+  color: blue;
+}
+
+.p-sidebar {
+  width: 610px;
+  padding: 1px 20px 0 20px;
+  etter-spacing: 1px;
+  color: rgb(0 0 52);
+}
+
+.img-sidebar-2 {
+  width: 610px;
+    height: 68px;
+    padding-top: 10px;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.one {
+  margin-top: 30px;
+}
+
+.title-1 {
+  font-size: 36px;
+  font-family: 'Unbounded', sans-serif;
+  text-align: center;
+  text-transform:uppercase;
+  color: #A04400; 
+}
+
+/*HOME PAGE-1*/
+.home-page {
+ background-image: url('https://99px.ru/sstorage/86/2021/03/image_860703212327333629774.gif');
+ /*opacity:0;transition:.5s;*/
+}
+
+.header-home-page {
+  background-color: transparent;
+} /*нужно так прописать если в многостраничном сайте на некоторых стр хедер меняет цвет*/
+
+.h1-home-page{
+  padding-top: 30p;
+  font-size: 120px;
+  font-family: 'Unbounded', sans-serif;
+  text-align: center;
+  text-transform:uppercase;
+  color: #A04400;
+}
+
+.ul-home-page {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type:none;/*убирает очки у списка*/
+}
+
+.letters {
+  padding-right: 1px;
+}
+
+.dragon {
+  height: 113px;
+  transform:matrix(-1,0,0,1,0,0);
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.glitch {
+  position: relative;
+  padding:30px;
+  color:#fff;
+  font-family: 'Unbounded', sans-serif;
+  font-size:100px;
+  text-transform:uppercase;
+}
+.glitch:before, .glitch:after {
+  content:'2024';
+  width: 410px;
+  color:#fff;
+  position: absolute;
+  top:0;
+  overflow:hidden;
+  padding:30px;
+}
+.glitch:before {
+  left:3px;
+  text-shadow: -3px 0 red;
+  animation: glitch-before 4s linear 0s infinite alternate;
+}
+.glitch:after {
+  left:-3px;
+  text-shadow: -3px 0 blue;
+  animation: glitch-after 4s linear 0s infinite alternate;
+}
+
+@keyframes glitch-before {
+  0% {
+    clip: rect(58px, 500px, 17px, 30px);
+ }
+  5% {
+    clip: rect(12px, 500px, 58px, 30px);
+ }
+  10% {
+    clip: rect(53px, 500px, 125px, 30px);
+ }
+  15% {
+    clip: rect(111px, 500px, 72px, 30px);
+ }
+  20% {
+    clip: rect(70px, 500px, 116px, 30px);
+ }
+  25% {
+    clip: rect(109px, 500px, 144px, 30px);
+ }
+  30% {
+    clip: rect(144px, 350px, 7px, 30px);
+ }
+  35% {
+    clip: rect(118px, 500px, 71px, 30px);
+ }
+  40% {
+    clip: rect(147px, 500px, 120px, 30px);
+ }
+  45% {
+    clip: rect(57px, 500px, 145px, 30px);
+ }
+  50% {
+    clip: rect(63px, 500px, 14px, 30px);
+ }
+  55% {
+    clip: rect(69px, 500px, 108px, 30px);
+ }
+  60% {
+    clip: rect(75px, 500px, 64px, 30px);
+ }
+  65% {
+    clip: rect(108px, 500px, 25px, 30px);
+ }
+  70% {
+    clip: rect(129px, 500px, 139px, 30px);
+ }
+  75% {
+    clip: rect(25px, 500px, 113px, 30px);
+ }
+  80% {
+    clip: rect(47px, 500px, 125px, 30px);
+ }
+  85% {
+    clip: rect(142px, 500px, 35px, 30px);
+ }
+  90% {
+    clip: rect(14px, 500px, 117px, 30px);
+ }
+  95% {
+    clip: rect(135px, 500px, 104px, 30px);
+ }
+  100% {
+    clip: rect(75px, 500px, 63px, 30px);
+ }
+}
+
+@keyframes glitch-after {
+  0% {
+    clip: rect(71px, 500px, 102px, 30px);
+ }
+  5% {
+    clip: rect(77px, 500px, 6px, 30px);
+ }
+  10% {
+    clip: rect(142px, 500px, 119px, 30px);
+ }
+  15% {
+    clip: rect(1px, 500px, 20px, 30px);
+ }
+  20% {
+    clip: rect(35px, 500px, 56px, 30px);
+ }
+  25% {
+    clip: rect(65px, 500px, 116px, 30px);
+ }
+  30% {
+    clip: rect(5px, 500px, 89px, 30px);
+ }
+  35% {
+    clip: rect(81px, 500px, 41px, 30px);
+ }
+  40% {
+    clip: rect(106px, 500px, 134px, 30px);
+ }
+  45% {
+    clip: rect(16px, 500px, 28px, 30px);
+ }
+  50% {
+    clip: rect(76px, 500px, 125px, 30px);
+ }
+  55% {
+    clip: rect(130px, 500px, 141px, 30px);
+ }
+  60% {
+    clip: rect(103px, 500px, 75px, 30px);
+ }
+  65% {
+    clip: rect(4px, 500px, 32px, 30px);
+ }
+  70% {
+    clip: rect(7px, 500px, 123px, 30px);
+ }
+  75% {
+    clip: rect(106px, 500px, 42px, 30px);
+ }
+  80% {
+    clip: rect(41px, 500px, 94px, 30px);
+ }
+  85% {
+    clip: rect(95px, 500px, 5px, 30px);
+ }
+  90% {
+    clip: rect(139px, 500px, 144px, 30px);
+ }
+  95% {
+    clip: rect(100px, 500px, 99px, 30px);
+ }
+  100% {
+    clip: rect(5px, 500px, 126px, 30px);
+ }
+}
+
+/*PAGE CONGRATULATIONS - 2*/
+.section-one-congratulation {
+  margin-top: 15px;
+}
+
+.header-page-cogratulation {
+background-color: transparent;
+}
+
+.logo-congratulation-page {
+  height: 100px;
+  border-radius: 70px;
+}
+
+/*Slider*/
+.sectionSlider {
+  osition: absolute;
+  isplay: flex;
+  width: 943px;/*952px;подключать если сзади слайдера делать картинку(герляны) в виде бэкграунда*/
+  height: 503px;/*472px;подключать если сзади слайдера делать картинку(герляны) в виде бэкграунда*/
+  margin: 0 auto;
+  top: 344p;
+  left: 130p;
+  ackground-image: url(https://i.pinimg.com/originals/f0/6d/24/f06d24a28474a6040c76b41d80a88543.gif);/*изображени герлянды под задний фон слайдера*/
+  ackground-image: url(https://acegif.com/wp-content/uploads/gif/snwflks-53.gif);
+  ackground-size: cover;
+  ox-shadow: 0px 0px 31px 28px beige;
+}
+  
+.sliderWrapFlex {
+  osition: absolute;
+  isplay: flex;
+  width: auto;
+  height: auto;
+  top: 144px;
+  left: 162px;
+  order: 10px double #0006cd;
+  ackground-color: #ffc107;
+  ox-shadow:0px 0px 30px 26px beige;
+}
+  
+.containerSlider {
+  osition: absolute;
+  width: auto; 
+  height: auto;
+}
+  
+#slides{
+    position: relative;
+    width: 942p;
+    height: 500p;
+    adding: 0px;
+    argin: 0px;
+    list-style-type: none;/* убрали точки у лишек*/
+}
+  
+.slide{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+  
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+}
+  
+.showing{
+    opacity: 1;
+    z-index: 2;
+}
+  
+.controls{
+    display: none;
+}
+  
+  /*
+  non-essential styles:
+  just for appearance; change whatever you want
+  */
+  
+.slide{
+    padding: 40p;
+    box-sizing: border-box;
+    background: #333;
+    color: #fff;
+    background-size: cover;
+    font-size: 40px;
+}
+  
+  /* http://unrestrictedstock.com/wp-content/uploads/snowy-winter-vignette-bokeh-night-snow-falling-free-stock-photo.jpg */
+slide:nth-of-type(1){
+    background-color: red;
+   /* background-image: url('images/IMG_2894.png' 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/snowy-winter-vignette-bokeh-night-snow-falling-free-stock-photo.jpg');*/
+  background-size: cover;
+}
+  
+  /* http://www.dawghousedesignstudio.com/wp-content/uploads/2010/01/25/free-stock-photos-1.jpg */
+slide:nth-of-type(7){
+    background-color: orange;
+    background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/free-stock-photos-1.jpg');
+}
+  
+.controls{
+    background: #00000038/*#333*/;
+    color: #fff;
+    border: none;
+    padding: 20px 0px;
+    font-size: 20px;
+    cursor: pointer;
+    order: 2px solid #fff;
+    argin: 10px 0px 0px 10px;
+    width: 70p;
+    ransition: background-color 0.6s ease;
+    transition: opacity 0.4s ease;
+    opacity: 0.4;  
+}
+  
+.controls:hover,
+.controls:focus{
+    /*background: #eee;
+    color: #333;*/
+    opacity: 1; 
+}
+  
+.buttons{
+  position: absolute;
+  display: flex;
+  width: 942p;
+  top: 413px;
+  left: 295px;
+  z-index: 10;
+  z-index: 10;
+  font-size: 0px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 832px;
+  /* padding-top: 150px; */
+}
+  
+.filterimgSlide {
+  width: 943px/*100%*/;
+  height: 503px/*100%*/;
+  filter: brightness(1);
+}
+  
+.imgSlide {
+  width: 100%;
+  height:100%;
+}
+  
+.textSlide {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 943px;
+  height: 50px;
+  background-color: #00000036;
+  
+  font-family: 'Montserrat';
+  font-size: 30px;
+  font-weight: bold;
+  font-style: italic;
+  color: white;
+  z-index: 1;
+}
+  
+.textTwoSlide {
+  position: absolute;
+  width: 600px;
+  bottom: 399px;
+  left: 96px;
+  
+  font-family: 'Pacifico', cursive;
+  font-size: 37px;
+  font-weight: bold;
+  ont-style: italic;
+  text-align: center;
+  color: #36f482;
+}
+
+.textFiveSlide {
+  position: absolute; 
+  bottom: 70px;
+  left: 57px;
+  color: red;
+}
+/*SLIDER*/
+
+.video__slides-2-5 {
+width: 100%;
+height: 100%;
+background-image: url('../images/image-bg.png');
+background-size: cover;
+}
+
+/*PHOTO PAGE -3*/
+.photo-page {
+ background-image: url('https://www.chitalnya.ru/upload3/435/f56a1bdcaefa1a422fa0b8eccd786382.gif'); 
+}
+
+.header-page-photo {
+ ackground-color: #00000059;
+  ox-shadow: inset 0px 136px rgb(0 0 0 / 42%);/*Внутреннее затемнение тенью у хедера*/
+}
+
+.logo-photo-page {
+  height: 100px;
+}
+
+/*LIGHTBOX*/
+.row {
+  padding-top: 100px;
+}
+
+.row > .column {
+  padding: 0 8px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.mySlides {
+  height: 600px;
+}
+
+/* Create four equal columns that floats next to eachother */
+.columns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-image: url('https://99px.ru/sstorage/86/2016/02/image_860702161155422993396.gif');
+  background-size: cover;
+  ackground-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  ackground-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Hide the slides by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Caption text */
+.caption-container {
+  text-align: center;
+  ackground-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+img.demo {/**/
+  width: 294px;
+  height: 60px;
+  opacity: 0.6;
+   
+}
+
+.active, .demo:hover {
+  height: 60px;
+  opacity: 1;
+}
+
+img.hover-shadow {
+  width: 280px;
+  height: 200px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/*/LIGHTBOX*/
+
+/*PAGE GLOW 4*/
+.glow-page {
+  background-image: url('https://www.vrogue.co/top-featureds-i.pinimg.com/originals/ea/82/ec/ea82ec2b311e68340d2edf54380cef76.gif');
+  box-shadow:
+  inset 0 47em 3em rgb(0 0 0 / 55%), 0 0 0 2px black,/*внетреннее затемнение боди*/
+   0.0em 0.0em 0em rgb(0 0 0 / 0%);/*внешняя тень боди. здесь она не нужна. 
+   можно делать для фоток. смотреть оригинал - https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow*/
+  /*opacity:0;transition:.5s;*/
+}
+
+.header-page-glow {
+  background-color: transparent;
+}
+
+.logo-glow-page {
+  height: 100px;
+}
+
+.textOffGluwText {
+ display: non;
+  padding-top: 116px;
+  /*overflow: hidden; /*Для появления текста снизу Скрыть часть текста, которая выходит за пределы контейнера */
+  /*transform: translateY(100px);*/
+}
+
+/*СВЕТЯЩИЙСЯ ТЕКСТ*/
+.glow {
+  isplay: inline-block;
+  padding-top: 116p;
+  font-size: 104px;
+  color: #fff;
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
+  font-family: 'Unbounded';
+  /*animation: move-up 10s ease-in-out infinite; /* Для появления текста снизу Назначение анимации тексту */
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+
+/*Появление текста снизу
+@keyframes move-up {
+  0% {
+    transform: translateY(100%); /* Начальное положение текста (скрыто внизу) *
+  }
+  100% {
+    transform: translateY(0); /* Конечное положение текста (поднято вверх) *
+  }
+}*/
+
+
+
+
+
+/* Responsive */
+
+@media screen and (max-width: 1300px) {
+
+}
+
+/* Large: 992px - 1199px 
+@media (max-width: 1199px) {}*/
+
+/* Medium: 768px - 991px 
+@media (max-width: 991px) {}*/
+
+@media screen and (max-width: 1024px) {
+
+}
+
+@media screen and (max-width: 800px) {
+
+}
+
+/* Small: 576px - 767px 
+@media (max-width: 767px) {}*/
+
+@media screen and (max-width: 768px) {
+.continer {width: 720px;}
+}
+
+@media screen and (max-width: 425px) {
+
+}
+
+@media screen and (max-width: 375px) {
+.continer {width: 320px;}
+}
+
+/* Extra small: 0px (320px) - 575px
+@media (max-width: 575px) {} */
+
+@media screen and (max-width: 320px) {
+
+}
+

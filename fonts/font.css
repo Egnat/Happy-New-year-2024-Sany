@@ -1,0 +1,50 @@
+/* Пример с Скиллфектори. Прописываем этот код, для того чтобы он автоматически добавил шрифт,
+используемый в проекте в качестве основного, в данном случае Монтсеррат, если у пользователя такой шрифт
+не установлен на компе. В Боди, в Арр.цсс глобально прописываем шрифт, используемый в проекте. 
+body {
+    font-family: Montserrat, sans-serif;
+}
+В index.html, в хэде прописываем путь к этому файлу, как к App.css или styles.css. 
+Этот код нужно прописать и подключить в хэде штмл если сборка не в Реакте.В Реакте код для поиска
+шрифтов прописывается автоматом по меркам фирмы.
+@font-face {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    src: local("Montserrat"),
+             url("Montserrat-Regular.woff") format("woff");
+  }
+
+  2.  @font-face {
+        font-family: "MyFont";
+        src: local("MyFont"),
+        url("path/to/fontfile.woff2") format("woff2"),
+            url("path/to/fontfile.woff") format("woff");
+        font-weight: normal;
+        font-style: normal;
+   }
+
+Это пример с WayUp, только здесь пример со шрифтом ChunkFiveRegular
+
+  @font-face {
+font-famyly: “ChunkFiveRegular”;
+src: url (“fonts/chunkfive.eot”);
+src: url (“fonts/chunkfive.eot?#iefix”);
+format (embedded-opentype”),
+url (“fonts/chunkfive.woff”) format (“woff”),
+url (“fonts/chunkfive.ttf”) 
+format (“truetype”),
+url (“fonts/chunkfive.svg#ChunkFiveRegular”)
+ format (“svg”);
+}
+  */
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Montserrat"),
+           url("Montserrat-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
