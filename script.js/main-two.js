@@ -25,7 +25,7 @@ function goToSlide(n){
 var playing = true;
 var pauseButton = document.getElementById('pause');
 //pauseButton.style.position = "absolute";
-pauseButton.style.width = "80px";
+pauseButton.style.width = "833px";
 pauseButton.style.height = "67px";
 pauseButton.style.top = "185px";
 pauseButton.style.left = "449px";
