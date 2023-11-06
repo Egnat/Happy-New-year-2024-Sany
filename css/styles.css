@@ -100,8 +100,8 @@ font-family:"Yeseva+One"
 
 html {
 box-sizing:border-box;
-min-width:1200px;
-height:auto;
+min-width:1200p;
+eight:auto;
 scroll-behavior: smooth;/*для плавного скрола по секцим страницы страницы*/
 }
 
@@ -137,7 +137,7 @@ font-family:'Montserrat', Arial, sans-serif;
 font-size: 16px;
 font-weight: 400;
 line-height: 1.2;
-opacity:0;transition:.5s;
+opacity:0;transition:.5s;/*добавляем для плавного переключения страниц*/
 }
 
 .wrapper {
@@ -1091,7 +1091,7 @@ img.hover-shadow {
 
 .textOffGluwText {
  display: non;
-  padding-top: 116px;
+  padding-top: 70px;
   /*overflow: hidden; /*Для появления текста снизу Скрыть часть текста, которая выходит за пределы контейнера */
   /*transform: translateY(100px);*/
 }
@@ -1128,7 +1128,52 @@ img.hover-shadow {
   }
 }*/
 
-
+/*img*/#flying_santa {/*img нужно сделать если подключаю через скрипт*/
+  position: absolute;
+  width: 650p;
+  eight: 64px;
+  top: 595px;
+  right: 242p;
+  eft: 0;
+  z-index: 2;
+  -webkit-animation: linear infinite;
+  -webkit-animation-name: mymove;
+  -webkit-animation-duration: 75s;
+  /*animation-direction: alternate-reverse; /*движение элемента вперёд и назад без разворота, подходит для кубиков, мячиков*
+    animation-duration: 5s;
+    animation-name: mymove;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;*/
+  cursor: pointe;
+  /*nimation-timing-function: linear;/*Линейная функция, анимация происходит равномерно на протяжении всего времени, без колебаний в скорости.*/
+  /*nimation-direction: alternate; /*движение элемента слева вправо, потом пропадает и снова появляется слева*
+  nimation-name: mymove;
+  nimation: mymove 75s infinite; /*-iteration-count регулируется быстрота и медлительность движения*/
+  /*animation-duration: 100s; /*регулируется быстрота и медлительность движения при включенном js*/
+  /*transition: /*left 3s ease-in-out /*cubic-bezier(.65,.17,1,-0.08) 0s*/;/*можно использовать для движения анимации*/
+  /*animation-delay: 500s;/*время через сколько запустится анимация*/
+  /*animation-iteration-count: mymove ; /*сколько раз сработает, но пока не работает*/ 
+  }
+/*Элемент двигается по всей странице туда-обратно с разворотом*/
+  @-webkit-keyframes mymove {
+    0% {
+      left: 0;
+    }
+    48% {
+      -webkit-transform: rotateY(0deg); 
+    }
+    50% { 
+      left: calc(85% - 100px);/*85% регулируют длину движения элемента*/
+      -webkit-transform: rotateY(180deg);
+    }
+    98% {
+      -webkit-transform: rotateY(180deg); 
+    }
+    100% {
+      left: 0;    
+       -webkit-transform: rotateY(0deg);
+    }
+  }
 
 
 
