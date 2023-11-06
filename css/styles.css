@@ -846,7 +846,7 @@ slide:nth-of-type(7){
   font-size: 0px;
   justify-content: space-between;
   align-items: center;
-  gap: 832px;
+  gap: 376px;
   /* padding-top: 150px; */
 }
   
@@ -898,7 +898,7 @@ slide:nth-of-type(7){
   left: 57px;
   color: red;
 }
-/*SLIDER*/
+/*/SLIDER*/
 
 .video__slides-2-5 {
 width: 100%;
