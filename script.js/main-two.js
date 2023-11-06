@@ -100,25 +100,25 @@ const time = setInterval(() => {
 
 //Смена цвета у слов // массив цветов
 //Функции и переменные не должно называться одинаково для использования двух или ольше элементов
-let colorNamesss = ["blue", "cyan", "red", "gold", "green", "yellow", "orange"];
+let colorNamess = ["blue", "cyan", "red", "gold", "green", "yellow", "orange"];
 
 // функция поиска random-числа
-const randomss = (min, max) => {
-  max = colorNamesss.length - 1;
-  const rand = min + Math.round(Math.random() * (max - min));
-  return rand;
+const randome = (min, max) => {
+  max = colorNamess.length - 1;
+  const rande = min + Math.round(Math.random() * (max - min));
+  return rande;
 };
 
 // найти элементы для изменения свойств
-let paragraphsss = document.getElementsByClassName("textTwoSlide");
+let paragraphss = document.getElementsByClassName("textTwoSlide");
 
 // менять цвет каждую секунду, присвоив каждому эл-ту массива paragraphs новое значение
 setInterval(() => {
-  for (let i = 0; i < paragraphsss.length; i++) {
-    paragraphsss[i].style.color = colorNamesss[random(0)];
+  for (let i = 0; i < paragraphss.length; i++) {
+    paragraphss[i].style.color = colorNamess[random(0)];
   }
 }, 3000);
-console.log(colorNamesss);
+console.log(colorNamess);
 
 /* DROPDOUN When the user clicks on the button,
 toggle between hiding and showing the dropdown content */

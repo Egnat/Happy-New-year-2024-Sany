@@ -3,7 +3,7 @@
 //https://www.w3schools.com/howto/howto_js_lightbox.asp сайт со слайдерами
     /*когда пишу скрипт в футере, в хэде ссылка <script type="text/javascript" src="main.js">>не нужна*/
 
-//Смена цвета у слов // массив цветов
+//Смена цвета у букв Главная стр // массив цветов
 //Функции и переменные не должно называться одинаково для использования двух или ольше элементов
 let colorNames = ["blue", "cyan", "red", "gold", "#d51e8f", "yellow", "orange", "white", "wheat"];
 
@@ -47,10 +47,10 @@ window.onclick = function(event) {
 /////////
 
 //Исчезнавение и появление текста при клике на другой элиментможно так писать, как сделал я
-const cardOff = document.querySelector('.cardOfFFilterArticle');
+const cardOff = document.querySelector('.btn');/*cardOfFFilterArticle*/
 
 cardOff.addEventListener('click', () => {//function show
-  const photoOff = document.querySelector('.filter-p-article__cardOff');//Можно спрятать и вернуть любой элемент 
+  const photoOff = document.querySelector('.photoOff');//filter-p-article__cardOff  Можно спрятать и вернуть любой элемент 
   if (photoOff.style.display == "none") {
      photoOff.style.display = "block";
       return true;
@@ -76,7 +76,7 @@ const anim = document.querySelector('.w3-animate-righ');
 anim.addEventListener("click", (event) => {
   anim.style.animation = "0.4s";
 });
-//////////
+/*/Это не из примера, это я сам*/
 
 function openRightMenu() {
   document.getElementById("rightMenu").style.display = "block";
@@ -126,23 +126,7 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
   captionText.innerHTML = dots[slideIndex-1].alt;
-}
-
-//Пока не работает Исчезнавение и появление светящегося текста при клике на другой элиментможно так писать, как сделал я
-/*const cardOf = document.querySelector('.cardOfffGlowText');
-
-cardOf.addEventListener('click', () => {//function show
-  const textOff = document.querySelector('.textOffGluwText');//Можно спрятать и вернуть любой элемент 
-  if (textOff.style.display == "none") {
-     textOff.style.display = "block";
-      return true;
-  } else { // иначе он найден
-    textOff.style.display = "none";
-     return false;
-  }
-  alert('hi');// просто для проверки работы кода
-});*/
-/////////
+};
 
 //Скрипт для летающего Деда Мороза. Не помню работает или нет
 /*let step = 0;

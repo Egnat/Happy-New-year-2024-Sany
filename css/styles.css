@@ -91,11 +91,25 @@ font-family:"Yeseva+One"
 }
 
 .btn {
+  display: flex;
+  justify-content: center;
   min-width: 170px;
   height: 100%;
-  background-color: white;
+  padding: 10px 20px;
+  background-color:rgb(0 26 225);
+  color: #ffffff;
+  font-family: 'Unbounded', Arial, sans-serif;
+  font-size: 15px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
   border:none;
-  color: blue;
+  order: 1p solid rgb(0, 38, 252);
+  border-radius: 4p;
+  ackground-color: white;
+  olor: blue;
+  z-index: 1;
+  cursor: pointer;
 }
 
 html {
@@ -176,7 +190,19 @@ width: 170px;
 }
 
 /*CARDOFF*/
-.cardOfFFilterArticle, .cardOfffGlowText {
+/*Это дополнительные классы для кнопки на разных страницах, я их отключил,
+ потому что задал кнопкам на разных стр один класс btn со стилями для кнопок
+ на разных страницах. Поскольку на страницах где есть кнопки, кнопки при нажатии
+ на них открывают и закрывают элементы, которые тоже расположены на разных стр.,
+это элементы - светящийся текст на стр Glow и артикль с параграфом на Главной стр,
+этим элементам я задал одинаковый клас photoOff и в фале мэйн.джс и все кнопки 
+по их классу .бтн нахожу, чтобы они срабатывали при клике на них, и все элементы,
+которые нужно открыть, нахожу по единому классу .photoOff , так и код чище, а в
+css файле прописываю элементы, у которых общий классаом photoOff, под доп классами
+textOffGluwText и filter-p-article__cardOff и без проблем прописываю для каждого
+нужные стили! На тех страницах, где кнопки не нужны, можно их в индексе.штмл их
+ не писать или если написал, то заккоментировать.*/
+cardOfFFilterArticle, cardOfffGlowText {
   display: flex;
   justify-content: center;
   idth: auto;
@@ -206,6 +232,7 @@ width: 170px;
   background-color: #f1f1f1;
   bottom: 508px;
   left: 1033px;
+  adding: 0;
   margin: 0;
   filter: brightness(1.0);
 }
@@ -247,16 +274,16 @@ width: 170px;
   justify-content: space-between;
   align-items: center;
   margin: 0;
-font-size:15px;
-list-style-type:none;
-font-family:"Unbounded",Arial,sans-serif;
-font-style:normal;
-font-weight:400;
-line-height:15px;
-list-style-type:none;/*убирает точки у списка*/
-text-transform:uppercase;
-color:#fff;
-gap:25px;
+  font-size:15px;
+  list-style-type:none;
+  font-family:"Unbounded",Arial,sans-serif;
+  font-style:normal;
+  font-weight:400;
+  line-height:15px;
+  list-style-type:none;/*убирает точки у списка*/
+  text-transform:uppercase;
+  color:#fff;
+  gap:25px;
 /*text-decoration: line-through - используется для перечеркивания текста;
 underline - подчеркивает текст;
 overline - используется для помещения линии над текстом (надчеркнутый текст);
@@ -888,7 +915,7 @@ slide:nth-of-type(7){
 .textTwoSlide {
   position: absolute;
   width: 600px;
-  bottom: 399px;
+  bottom: 350px;
   left: 96px;
   
   font-family: 'Pacifico', cursive;
@@ -1059,7 +1086,6 @@ img.demo {/**/
   width: 294px;
   height: 60px;
   opacity: 0.6;
-   
 }
 
 .active, .demo:hover {
@@ -1098,7 +1124,7 @@ img.hover-shadow {
 }
 
 .textOffGluwText {
- display: non;
+ display: none;
   padding-top: 70px;
   /*overflow: hidden; /*Для появления текста снизу Скрыть часть текста, которая выходит за пределы контейнера */
   /*transform: translateY(100px);*/
