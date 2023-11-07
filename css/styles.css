@@ -227,7 +227,7 @@ cardOfFFilterArticle, cardOfffGlowText {
   cursor: pointer;
 }
 
-.cardOfFFilterArticle:hover {
+.cardOfFFilterArticle:hover, .cardOfffGlowText:hover {
   background-color: red;
   color: blue;
 }
