@@ -551,7 +551,7 @@ a:-webkit-any-link {
 .showflake {
   position: absolute;
   top: 202px;
-  left: 127px;
+  left: 120px;
   z-index: 1;
   transform: matrix(-1, 0, 0, 1, 0, 0);
 }
