@@ -118,7 +118,8 @@ font-family:"Yeseva+One"
   z-index: 1;
   cursor: pointer;
 }
-
+/*Пример свойст штмл и боди, взятие хедера, мэйна, футера во wrapper взял от сюда
+https://www.youtube.com/watch?v=AvMusILfIdQ&list=PLVTUJUbFu7UeD0HL7zOgkoe7fu_n0chaA&index=2*/
 html {
 box-sizing:border-box;
 min-width:1200p;
@@ -129,6 +130,8 @@ scroll-behavior: smooth;/*для плавного скрола по секцим
 html, body {
   width: 100%;
   height: 100%;
+  /* width: svw;lvw;dvw, height: dvh; lvh; svh - новые еденицы измерения
+  https://www.youtube.com/watch?v=agDmYyxU2Mc&list=PLVTUJUbFu7UeGmos95KPuHbvZmVV1l_w5&index=4*/
 }
 
 *, *::after, *::before {
@@ -227,15 +230,18 @@ cardOfFFilterArticle, cardOfffGlowText {
   cursor: pointer;
 }
 
-.cardOfFFilterArticle:hover, .cardOfffGlowText:hover {
+.cardOfFFilterArticle:hover, .cardOfffGlowText:hover, 
+.cardOff-video:hover, .cardOfFGretting-marriage:hover {
   background-color: red;
   color: blue;
 }
 
-.filter-p-article__cardOff {
+.wrappCardOff {}
+/*Попап на Главной*/
+.filter-p-article__cardOff  {
   position: absolute;
   display: none;
-  max-width: 254px;
+  width: 254px;
   background-color: #f1f1f1;
   bottom: 508px;
   left: 1033px;
@@ -249,6 +255,92 @@ cardOfFFilterArticle, cardOfffGlowText {
   padding: 15px 15px;
   text-align: center;
 }
+/*/Попап на Главной*/
+
+/*Попап на Congratulation*/
+.wrapp-gretting-marriage {
+  position: absolute;
+  display: none;
+  width: 1366px;
+  top: 147px;
+  left: 866p;
+  padding: 0 168px 0 0;
+  z-index: 3;
+}
+
+.filter-text-h2 {
+  osition: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 500p;
+  background-color: #f1f1f1;
+  bottom: 151p;
+  left: 864p;
+  adding: 0;
+  margin: 0;
+  filter: brightness(1.0);
+  gap:1px;
+}
+
+.title-gretting-marriage {
+  padding: 15px 15px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.wrapp-p-img {
+  display: flex;
+  justify-content: space-between;
+  lign-items: center;
+  padding: 15px;
+  gap: 15px;
+}
+
+.text-gretting-marriage {
+  max-width: 254p;
+  padding: 0 15p;
+  ext-align: center;
+  text-align: justify;/*Растягивает текст на всю ширину контейнера*/
+  line-height: calc(16vh / 4);/*Растягивает текст на всю высоту контейнера, 
+  регулировать нужно 16vh*/
+}
+
+.block-img {
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+}
+/*order меняет элементы местами во флексе, при flex-direction: column;*/
+.span {
+  order:1;
+  font-size: 25px;
+}
+/*order меняет элементы местами во флексе, при flex-direction: column;*/
+.glass {
+  order:2;
+  idth: 300%;
+  height: 248px;
+  ackground-image: url('https://99px.ru/sstorage/86/2017/12/image_863112170024335743635.gif');
+  ackground-size: cover;
+  -webkit-filter: grayscale(100%) contrast(150%) opacity(0.3); /*эффекты можно комбинировать*/  
+ilter: opacity(0.3);/* цвет фото под цвет боди и регулируется затемненность */ 
+ilter: brightness(0.2);/*делает затемнение фото черного цвета*/
+ilter:contrast(1.5);/*делает пелину блока под цвет его бэкграунда, ножно блоку добавить background-color*/
+}
+/*/Попап на Congratulation*/
+
+/*Попап на Photo*/
+.video-gretting {
+  position: absolute;
+  display: none;
+  width: 500px;
+  height: 184px;
+  left: 906px;
+  top: 106px;
+}
+/*/Попап на Photo*/
 
 .imgHeader-2 {
   width:600p;
@@ -512,6 +604,7 @@ a:-webkit-any-link {
 .p-sidebar {
   width: 610px;
   padding: 1px 20px 0 20px;
+  text-align: justify;/*Растягивает текст на всю ширину контейнера*/
   etter-spacing: 1px;
   color: rgb(0 0 52);
 }
@@ -965,10 +1058,17 @@ background-size: cover;
 /*LIGHTBOX*/
 .row {
   padding-top: 100px;
+  padding-top: 100px;
+  display: flex;
+  justify-content: space-around;
+  lign-items: center;/*если фото разного размера, отключаем основному блоку центр
+  обёртке фото column делаем height:auto, фотке делаем width: 100%;height: 100%;
+  и фотки растягиваются на всю длинну и ширину*/ 
+   gap: 15px;
 }
 
 .row > .column {
-  padding: 0 8px;
+  padding: 0 8p;
 }
 
 .row:after {
@@ -981,17 +1081,20 @@ background-size: cover;
   height: 600px;
 }
 
-/* Create four equal columns that floats next to eachother */
+/*Это касается стр большого фото
+ Create four equal columns that floats next to eachother */
 .columns {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
   gap: 8px;
 }
 
 .column {
   float: left;
   width: 25%;
+  height: auto;
 }
 
 /* The Modal (background) */
@@ -1090,7 +1193,7 @@ background-size: cover;
 }
 
 img.demo {/**/
-  width: 294px;
+  width:100%;/* 294px*/
   height: 60px;
   opacity: 0.6;
 }
@@ -1101,8 +1204,8 @@ img.demo {/**/
 }
 
 img.hover-shadow {
-  width: 280px;
-  height: 200px;
+  width: 100%;/*280px*/
+  height: 100%;/*200px;*/
   transition: 0.3s;
   cursor: pointer;
 }
@@ -1131,7 +1234,7 @@ img.hover-shadow {
 }
 
 .textOffGluwText {
- display: none;
+ display: block;
   padding-top: 70px;
   /*overflow: hidden; /*Для появления текста снизу Скрыть часть текста, которая выходит за пределы контейнера */
   /*transform: translateY(100px);*/

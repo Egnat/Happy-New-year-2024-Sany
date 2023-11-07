@@ -46,6 +46,7 @@ window.onclick = function(event) {
 }
 /////////
 
+//Текст малому На главной и Светящийся текст и Congratulation
 //Исчезнавение и появление текста при клике на другой элиментможно так писать, как сделал я
 const cardOff = document.querySelector('.btn');/*cardOfFFilterArticle*/
 
