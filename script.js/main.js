@@ -72,13 +72,6 @@ function closeLeftMenu() {
   document.getElementById("leftMenu").style.display = "none";
 }*/
 
-/*Это не из примера, это я сам*/
-const anim = document.querySelector('.w3-animate-righ');
-anim.addEventListener("click", (event) => {
-  anim.style.animation = "0.4s";
-});
-/*/Это не из примера, это я сам*/
-
 function openRightMenu() {
   document.getElementById("rightMenu").style.display = "block";
 }

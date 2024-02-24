@@ -24,8 +24,9 @@ https://www.w3schools.com/howto/howto_css_parallax.asp
 <link rel="stylesheet" type="text/css" href="../fonts/font.css">
 <link rel="stylesheet" type="text/css" href="../css/index.css">
 <link rel="stylesheet" type="text/css" href="../css/styles.css"> 
+<link rel="stylesheet" type="text/css" href="../normalize/normalize.css">
 <!--<link rel="stylesheet" type="text/css" href="public/font.css/fonts.css">описание в файле фонтс.цсс-->
-<link rel="stylesheet" media="screen and (max-width: 1300px)" href="../css./tyles.css"><!--src/App.csscss/styles--><!--scss/base.css"-->
+<link rel="stylesheet" media="screen and (max-width: 1300px)" href="../css./styles.css"><!--src/App.csscss/styles--><!--scss/base.css"-->
 <!--<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
 <script src="http://thecode.local/wp-content/uploads/2019/06/jquery.js" type="text/javascript"></script>
 <script src='http://thecode.local/wp-content/uploads/2019/06/jqueryhighlight.js'>
@@ -87,24 +88,73 @@ https://www.w3schools.com/howto/howto_css_parallax.asp
             </div>
               <button class="btn cardOfFGretting-marriage" title="Клацни ещё раз, если с первого не откроется">press</button>
               <figure class="photoOff wrapp-gretting-marriage">
-               <article class="filter-text-h2">
-                  <h2 class="title-gretting-marriage">И конечно же тебя и твою супругу,</h2>
-                  <div class="wrapp-p-img"> 
-                   <p class="text-gretting-marriage">Поздравляю с самым замечательным и волнующим событием в вашей жизни - свадьбой! Это день, когда два сердца становятся одним, когда любовь и обещание прочно связывают вас вместе.
+               <!--<article class="filter-text-h2">
+                  <h2 class="title-gretting-marriage">И конечно же тебя и твою супругу,</h2>-->
+                  <!--<div class="wrapp-p-img">--> 
+                   <!--<p class="text-gretting-marriage">Поздравляю с самым замечательным и волнующим событием в вашей жизни - свадьбой! Это день, когда два сердца становятся одним, когда любовь и обещание прочно связывают вас вместе.
                    Пусть каждый ваш день будет наполнен счастьем, взаимопониманием и нежностью. Пусть ваш брак будет крепким союзом, основанным на уважении, поддержке и любви друг к другу.
                    Пусть ваше путешествие вместе будет наполнено радостными моментами, приключениями и взаимным ростом. Пусть вы всегда находите вдохновение и поддержку друг у друга, и ваша любовь становится сильнее с каждым днем.
                    Я хочу желаю вам много счастливых мгновений, много смеха и радости, много любви и благополучия. Пусть ваш брак будет наполнен яркими мгновениями, нежностью и взаимной заботой. 
                    Поздравляю вас с браком и желаю вам бесконечного счастья и любви на протяжении всей вашей совместной жизни.
                    С наилучшими пожеланиями,
-                   Серёга</p>
+                   Серёга</p>-->
                    <figure class="block-img">
-                     <img class="glass" src="https://99px.ru/sstorage/86/2017/12/image_863112170024335743635.gif" alt="Wineglass"></img>
-                     <p class="text-gretting-marriage"><span class="span">Этот бокал я поднимаю в вашу честь!</span></p>
+                    <picture class="glass"></picture><!--https://s0.rbk.ru/v6_top_pics/media/img/0/55/754870678606550.gif-->
+                     <!--<img class="glass" src="https://99px.ru/sstorage/86/2017/12/image_863112170024335743635.gif" alt="Wineglass"></img>-->
+                     <p class="text-gretting-marriage"><span class="span">Этот бокал я поднимаю в честь вашей свадьбы!</span></p>
                    </figure>
-                  </div>
-                </article>
+                  <!--</div>-->
+                <!--</article>-->
               </figure> 
               <!--<a class="button-link" href="https://www.facebook.com/profile.php?id=100011608800659" target="_blank" title="Страница откроется в новой вкладке">Contact</a>-->
+             <!--Сайдбар-->
+               <!--<div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="leftMenu">
+                  <button onclick="closeLeftMenu()" class="w3-bar-item w3-button w3-large">Close &times;</button>
+                  <!-Здесь прописываю контент, который мне нужен--
+                  <a href="#" class="w3-bar-item w3-button">Link 1</a>
+                  <a href="#" class="w3-bar-item w3-button">Link 2</a>
+                  <a href="#" class="w3-bar-item w3-button">Link 3</a>
+               </div>-->
+               <div class="w3-sidebar w3-bar-block w3-card w3-animate-right w3-sb-cong-s" style="display:none; right:0; top:0;" id="rightMenu">
+                 <button onclick="closeRightMenu()" class="w3-bar-item w3-button w3-large">Close &times;</button>
+                 <!--Здесь прописываю контент, который мне нужен-->
+                 <figure class="filter__img-sidebar">
+                    <img class="img-sidebar-1-cong-s" src="https://blestiashky.narod.ru/8/blesk24.gif" alt="Bouquet of roses"></img>
+                 </figure>
+                 <!--<img class="img-sidebar-2-cong-s" src="https://r.mt.ru/u3/photo0434/20252081491-0/original.gif" alt="Garland"></img>-->
+                 <h2 class="subtitle-h2 h2-cong-s-side-bar">И конечно же тебя и твою супругу</h2>
+                 <p class="p-sidebar">Поздравляю с самым замечательным и волнующим событием в вашей жизни
+                  - свадьбой! Это день, когда два сердца становятся одним, когда любовь и 
+                  обещание прочно связывают вас вместе. Пусть каждый ваш день будет наполнен 
+                  счастьем, взаимопониманием и нежностью. Пусть ваш брак будет крепким союзом,
+                  основанным на уважении, поддержке и любви друг к другу. Пусть ваше 
+                  путешествие вместе будет наполнено радостными моментами, приключениями и 
+                  взаимным ростом. Пусть вы всегда находите вдохновение и поддержку друг 
+                  у друга, и ваша любовь становится сильнее с каждым днем. Я желаю вам 
+                  много счастливых мгновений, много смеха и радости, много любви и 
+                  благополучия. Пусть ваш брак будет наполнен яркими мгновениями, 
+                  нежностью и взаимной заботой. Поздравляю вас с браком и желаю вам 
+                  бесконечного счастья и любви на протяжении всей вашей совместной жизни. 
+                  С наилучшими пожеланиями, Серёга.
+                 </p>
+                 <!--<a href="#" class="w3-bar-item w3-button">Link 1</a>
+                 <a href="#" class="w3-bar-item w3-button">Link 2</a>
+                 <a href="#" class="w3-bar-item w3-button">Link 3</a>-->
+               </div>
+               <div class="w3-teal">
+                 <!--<button class="w3-button w3-teal w3-xlarge w3-left" onclick="openLeftMenu()">&#9776;</button>-->
+                 <button class="w3-button w3-teal w3-xlarge w3-right" onclick="openRightMenu()">&#9776;</button>
+                 <!--<div class="w3-container">
+                    <h1>My Page</h1>
+                  </div>
+                </div>
+                <div class="w3-container">
+                  <p>In this example, we demonstrate how to use two side navigations.</p>
+                  <p>We have created two "menu" buttons: one to open the side navigation from the left and one to open it from the right.</p>
+                </div>-->
+               </div>
+           <!--/Сайдбар--> 
+         
         </div>
       </div>
     </header>
@@ -147,7 +197,7 @@ https://www.w3schools.com/howto/howto_css_parallax.asp
                        <li class="slide">
                          <h3 class="textSlide">Slide 5</h3>
                          <figure class="filterimgSlide">
-                          <video class="video__slides-2-5" controls="controls" oster="../images/DM-5bvGREFk.jpg" preload="metadata" title="Hi">
+                          <video class="video__slides-2-5" controls="controls" oster="../images/DM-5bvGREFk.jpg" preload="metadata" title="Тот кто пил, тот не забудет !">
                             <!--poster="images/1-fig.png" добавляет изображение, которое будет отображаться до начала воспроизведения видео или во время его загрузки, чтобы фото было по ширине и высоте видео, нужно регулировать видз и хейт видео-->
                             <source src="../videos/video-coca-cola.mp4" type="video/mp4">
                            <!-- <h5 class="text__video-main">hello</h5>-->
@@ -188,6 +238,11 @@ https://www.w3schools.com/howto/howto_css_parallax.asp
       </section>                                              
    </main>
    <footer class="footer" id="footer">
+    <div class="continerPj" id="continerPj">
+      <div class="footer__continer_content">
+        <h4 style="color: white;text-align: center; font-size: 14px;">© 2023 All rights reserved</h4>
+      </div>
+    </div>
     <!-- <span>&copy;&nbsp;Serega</span>-->
      <noscript>public/script.js/main.js для штмл в корневой папке</noscript>
      <noscript>Без включенного main.js текст в 8-м слайде мигает, но не меняет цвет</noscript>

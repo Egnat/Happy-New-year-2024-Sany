@@ -32,18 +32,26 @@ North Pole: Этот шрифт вдохновлен сказочным миро
 Вы можете найти эти шрифты и другие новогодние шрифты на различных веб-сайтах с бесплатными шрифтами, таких как Google Fonts, DaFont или Font Squirrel.
 */
 /*
-@import url('https://fonts.googleapis.com/css?family=Asap');
+@import url('https://fonts.googleapis.com/css?family=Asap');ИМПОРТ НА ПРЯМУЮ 
+С САЙТА ГУУГЛ ФОНТС
 */
 
 /*@font-face {
-  src: url("fonts/Pacifico.ttf");нужно скачать шрифт в папку fonts, в моём проекте
-  font-family: "Pacifico",cursive;
+  src: url("./fonts/Pacifico.ttf");нужно скачать шрифт в папку fonts, в моём проекте
+  font-family: "Pacifico", cursive;
   font-weight: 400;
   font-style: normal;
-  font-display: fallback;
+  font-display: fallback; ПРОПИСЫВАТЬ ТОЛЬКО @font-face, ЕСЛИ ПРОПИСЫВАТЬ В КОДЕ
+  КОНКРЕТНОГО ТЕКСТА - НЕ КАТИТ. МГНОВЕННАЯ ПОДГРУЗКА ШРИФТА И ДР.ШРИФТОВ ЕСЛИ НЕТ, 
+УСТАНОВЛЕННОГО МНОЙ. Для шрифта задаётся очень короткий период блокировки 
+и короткий период подмены. https://developer.mozilla.org/ru/docs/Web/CSS/@font-face/font-display
+}*/
+/*@font-face {КОД, КОГДА ШРИФТ СОХРАНЁН В ПАПКЕ, ЛЕЖАЩЕЙ В ПРОЕКТЕ
+src:url(./fonts/Yeseva.ttf);
+font-family:"Yeseva+One"
 }*/
 
-/*можно не скачивая шрифт в папку фонтс своего проект, пользоваться им с помощью 
+/*можно не скачивая шрифт в папку фонтс своего проектa, пользоваться им с помощью 
 ссылки. Прописав его у боди, задаём этот шрифт всем элементам 
 body: font-family: "Bitstream Vera Serif Bold";
 @font-face {
@@ -57,8 +65,8 @@ src:url(https://mdn.github.io/css-examples/web-fonts/VeraSeBd.ttf)
      Подключён индекс.цсс с кодом для проверки шрифтов у пользователя на компе
 }*/
 
-/*@import url(fonts.css); Если в файле стайлес.цсс прописать так, то с хеда
-link к папку fonts можно отключить*/
+/*@import url(./fonts/font.css); Если в файле стайлес.цсс прописать так, то с хеда
+link к папкe fonts можно отключить*/
 
 @import url('https://fonts.googleapis.com/css?family=Unbounded');
 
@@ -87,14 +95,11 @@ border-radius:10px;
 -webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.3)
 }
 
-/*@font-face {
-src:url(fonts/Yeseva.ttf);
-font-family:"Yeseva+One"
-}*/
-
 .continerPj {
-  max-width: 1200px;/*лучше писать здесь max-width, чем width https://www.youtube.com/watch?v=AvMusILfIdQ*/
+  idth: 1220px;/*Если не адаптивная и не отзыв-я вёрстка https://www.youtube.com/watch?v=XbnAKjjlgc4&t=19s obysneniy na 4 minute*/
+  max-width: 1220px;/*лучше писать здесь max-width, чем width https://www.youtube.com/watch?v=AvMusILfIdQ*/
   margin: 0 auto;
+  padding: 0 10px;
 }
 
 .btn {
@@ -119,25 +124,29 @@ font-family:"Yeseva+One"
   cursor: pointer;
 }
 /*Пример свойст штмл и боди, взятие хедера, мэйна, футера во wrapper взял от сюда
-https://www.youtube.com/watch?v=AvMusILfIdQ&list=PLVTUJUbFu7UeD0HL7zOgkoe7fu_n0chaA&index=2*/
+https://www.youtube.com/watch?v=AvMusILfIdQ&list=PLVTUJUbFu7UeD0HL7zOgkoe7fu_n0chaA&index=2
+Действие wrapper по одинаковому размещению хедера, мэйна, футера. Зачем
+боди и штмл 100% высота - 1ч.45мин*/
 html {
-box-sizing:border-box;
-min-width:1200p;
-eight:auto;
+box-sizing: border-box;
+min-width: 889p;
+eight: auto;
 scroll-behavior: smooth;/*для плавного скрола по секцим страницы страницы*/
 }
 
 html, body {
   width: 100%;
   height: 100%;
+  verflow: hidden;/*все элементы за границами экрана обрезаются*/
   /* width: svw;lvw;dvw, height: dvh; lvh; svh - новые еденицы измерения
   https://www.youtube.com/watch?v=agDmYyxU2Mc&list=PLVTUJUbFu7UeGmos95KPuHbvZmVV1l_w5&index=4*/
 }
 
-*, *::after, *::before {
-box-sizing:inherit;
+*, *::before, *::after {
+box-sizing: inherit;
 padding: 0;
 margin: 0;
+outline: solid re;/*удобно проверять лишнюю ширину и ввысоту у элементов*/
 }
 
 body {
@@ -149,19 +158,20 @@ body {
   -moz-osx-font-smoothing: grayscale; Можно подключить здесь, 
   а можно в индекс.цсс и подключить его в хэде штмл*/
 ox-sizing:border-box;
-width: 1280p;
+in-width: 1220px;/*Если не адаптивная и не отзыв-я вёрстка https://www.youtube.com/watch?v=XbnAKjjlgc4&t=19s obysneniy na 4 minute*/
 height: 1300p;/*чтобы линар не собирался в гармошку, нужно установить высоту, сейчвс отключена и линар тоже*/
 in-height: 100%;
 background-image:url(https://highstar.ru/pictures/snejinki/09.gif);/*путь с цсс к картинке (../images/abstractfirebloom.png);*/
 background-attachment:fixed;
 background-size:cover;
+background-repeat: no-repeat;
 ackground-color: #610377;
 ackground:linear-gradient(180deg,#F3CE0D 0%,rgba(255,153,0,0.38) 92.71%,rgba(255,184,0,0.37) 99.99%,rgba(255,255,255,0) 100%);
 font-family:'Montserrat', Arial, sans-serif;
 font-size: 16px;
 font-weight: 400;
 line-height: 1.2;
-opacity:0;transition:.5s;/*добавляем для плавного переключения страниц*/
+opacity:0; transition:.5s;/*добавляем для плавного переключения страниц*/
 }
 
 .wrapper {
@@ -171,7 +181,7 @@ opacity:0;transition:.5s;/*добавляем для плавного перек
 }
 
 .header {
-  background-color:transparent;
+  background-color: transparent;
 }
 
 .header__continer_content {
@@ -185,8 +195,8 @@ opacity:0;transition:.5s;/*добавляем для плавного перек
 }
 
 button-link {/*это стили для кнопки - ссылки, она отключена в штмл и стили тоже отключил*/
-display: block;
-width: 170px;
+  display: block;
+  width: 170px;
   padding: 10px 20px;
   background-color:rgb(0 26 225);
   color: #d6d6d6;
@@ -261,21 +271,22 @@ cardOfFFilterArticle, cardOfffGlowText {
 .wrapp-gretting-marriage {
   position: absolute;
   display: none;
-  width: 1366px;
-  top: 147px;
-  left: 866p;
-  padding: 0 168px 0 0;
+  width: 439px;
+  top: 122px;
+  left: 932px;
+  background-color: #f1f1f1;
+  /* padding: 0 168px 0 0; */
   z-index: 3;
 }
 
-.filter-text-h2 {
+filter-text-h2 {
   osition: absolute;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   width: 500p;
-  background-color: #f1f1f1;
+  background-color: #5e4234;
   bottom: 151p;
   left: 864p;
   adding: 0;
@@ -284,13 +295,13 @@ cardOfFFilterArticle, cardOfffGlowText {
   gap:1px;
 }
 
-.title-gretting-marriage {
+title-gretting-marriage {
   padding: 15px 15px;
   text-align: center;
   font-size: 30px;
 }
 
-.wrapp-p-img {
+wrapp-p-img {
   display: flex;
   justify-content: space-between;
   lign-items: center;
@@ -298,35 +309,52 @@ cardOfFFilterArticle, cardOfffGlowText {
   gap: 15px;
 }
 
+.block-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: auto;
+  gap: 20px;
+  padding-top: 20px; 
+  background-color: #523722;
+  color: wheat;
+  text-align: center;
+/*order меняет элементы местами во флексе, при flex-direction: column;*/
+}
+
 .text-gretting-marriage {
-  max-width: 254p;
+  max-width: 295px;
   padding: 0 15p;
   ext-align: center;
-  text-align: justify;/*Растягивает текст на всю ширину контейнера*/
+  ext-align: justify;/*Растягивает текст на всю ширину контейнера*/
+  order:1;
+  font-size: 25px;
   line-height: calc(16vh / 4);/*Растягивает текст на всю высоту контейнера, 
   регулировать нужно 16vh*/
 }
 
-.block-img {
-  display: flex;
-  flex-direction: column;
-  gap:20px;
-}
-/*order меняет элементы местами во флексе, при flex-direction: column;*/
-.span {
-  order:1;
-  font-size: 25px;
+.span {/*здесь и в в бокале ставил span, потому что был болшой блок
+         с поздравлением и нужен был ещё заголовок, я его перенёс в сайдбар
+         и в штмл, в кард оффе отключил*/
 }
 /*order меняет элементы местами во флексе, при flex-direction: column;*/
 .glass {
   order:2;
-  idth: 300%;
-  height: 248px;
-  ackground-image: url('https://99px.ru/sstorage/86/2017/12/image_863112170024335743635.gif');
-  ackground-size: cover;
-  -webkit-filter: grayscale(100%) contrast(150%) opacity(0.3); /*эффекты можно комбинировать*/  
-ilter: opacity(0.3);/* цвет фото под цвет боди и регулируется затемненность */ 
-ilter: brightness(0.2);/*делает затемнение фото черного цвета*/
+  width: 100%;
+  height: 284px;
+  ackground:linear-gradient(rgba(83, 55, 32, 164.71%), rgba(69, 25, 25, 0.0)),  
+  url( https://s0.rbk.ru/v6_top_pics/media/img/0/55/754870678606550.gif); /*https://99px.ru/sstorage/86/2017/12/image_863112170024335743635.gif
+  linear-gradient(rgba(255, 255, 255, 0.7), rgba(0, 0, 0, 0.8)), 
+  Внутренняя тень, сливание картинки с цветом бэкграунда блока Делается не картинке, а обёртке, в котором картинка*/
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top; 
+	ackground-attachment: fixed; 
+  background-image: url('https://s0.rbk.ru/v6_top_pics/media/img/0/55/754870678606550.gif');
+  ackground: linear-gradient(180.12deg,#5883fd 46%,#FFC700 9%);/*хорош, чтобы делать градиент бэкграунду блока без фотки. Не знаю, если ему прописать rgba, то может и фотке подойдёт.*/  
+  filter: brightness(1.0);/*делает затемнение фото черного цвета*/
+  webkit-filter: grayscale(100%) contrast(150%) opacity(0.3); /*эффекты можно комбинировать*/  
+  ilter: opacity(0.3);/* цвет фото под цвет боди и регулируется затемненность */ 
 ilter:contrast(1.5);/*делает пелину блока под цвет его бэкграунда, ножно блоку добавить background-color*/
 }
 /*/Попап на Congratulation*/
@@ -377,7 +405,7 @@ ilter:contrast(1.5);/*делает пелину блока под цвет ег�
   list-style-type:none;
   font-family:"Unbounded",Arial,sans-serif;
   font-style:normal;
-  font-weight:400;
+  font-weight: 400;
   line-height:15px;
   list-style-type:none;/*убирает точки у списка*/
   text-transform:uppercase;
@@ -454,11 +482,11 @@ animation: 0.7s;
   padding-left: 145p;
   color: white;
   font-size: 15px;
- font-family:"Unbounded",Arial,sans-serif;
-font-style:normal;
-font-weight:400;
-line-height:15px;
-gap: 25px;
+  font-family:"Unbounded",Arial,sans-serif;
+  font-style:normal;
+  font-weight:400;
+  line-height:15px;
+  gap: 25px;
 }
 
 .link-soc {
@@ -484,29 +512,38 @@ lign-items: center;
   height: 100%;
   width: 600p;
   background-color: #1ed80d;
-  z-index: 1;
+  z-index: 3;
   overflow: auto;
-  -webkit-animation-name: slowing;
+  /*///-webkit-animation-name: slowing;
   -webkit-animation-duration: 1.5s;
   animation-name: slowing;
-  animation-duration: 1.5s;
+  animation-duration: 1.5s;////Это св-ва для плавного появления, а не
+  для плавного выезда сайдбара Кейфреймс отключенный к этим свойствам*/
   ransition: opacity .4s ease;/* Плавное появление у кнопок слайдера
   или фото. Сюда не подходит.*/
 }
 
-@keyframes slowing {
+/*////@keyframes slowing {
   from {opacity: .2} 
   to {opacity: 1}
-  }
+  }*/
 
-.w3-animate-righ {
+.w3-animate-right {/*Плавный выезд сайдбара*/
   position: relative;
-  /*-webkit-animation-name: slowing;
-  -webkit-animation-duration: 1.5s;
-  animation-name: slowing;
-  animation-duration: 1.5s;*/
-   animation:animateright 0.4s;
-  ransition: visibility 0.5s, opacity 0.5s ease-in-out;
+  animation:animateright 0.4s;
+  transition: visibility 0.5s, opacity 0.5s ease-in-out;
+}
+
+@keyframes animateright {/*Плавный выезд сайдбара*/
+  0% {
+    right: -300px;
+    opacity: 0;
+}
+
+100% {
+    right: 0;
+    opacity: 1;
+}
 }
 
 .w3-card, .w3-card-2 {
@@ -581,14 +618,25 @@ a:-webkit-any-link {
   float: right!important;
 }
 *Gamburger*/
+
+/*дополнительный класс сайдбара СТР CONGRATULATION*/
+.w3-sb-cong-s {
+  background-color: #00e5ff;
+}
+
+.w3-sb-glow {
+  background-color: yellow;
+}
+
 /*Это весь сайдбар из примера/SIDEBAR*/
 
 .filter__img-sidebar {
   margin: 0;
   filter: brightness(1.0);
+  text-align: center;
 }
 
-.img-sidebar {
+.img-sidebar-1-hp {
   height: 392px;
 }
 
@@ -609,10 +657,15 @@ a:-webkit-any-link {
   color: rgb(0 0 52);
 }
 
-.img-sidebar-2 {
+.img-sidebar-2-hp {
   width: 610px;
-    height: 68px;
-    padding-top: 10px;
+  height: 68px;
+  padding-top: 10px;
+}
+
+.img-sidebar-1-cong-s {
+  height: 300px;
+  margin: 26px 0 32px 0;
 }
 
 .main {
@@ -633,7 +686,7 @@ a:-webkit-any-link {
 
 /*HOME PAGE-1*/
 .home-page {
- background-image: url('https://99px.ru/sstorage/86/2021/03/image_860703212327333629774.gif');
+  background-image: url('https://99px.ru/sstorage/86/2021/03/image_860703212327333629774.gif');
  /*opacity:0;transition:.5s;*/
 }
 
@@ -643,9 +696,9 @@ a:-webkit-any-link {
 
 .showflake {
   position: absolute;
-  top: 202px;
-  left: 120px;
-  z-index: 1;
+  top: 250px;
+  left: 741px;
+  z-index: -1;
   transform: matrix(-1, 0, 0, 1, 0, 0);
 }
     
@@ -662,7 +715,7 @@ a:-webkit-any-link {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  list-style-type:none;/*убирает очки у списка*/
+  list-style-type:none;/*убирает точки у списка*/
 }
 
 .letters {
@@ -855,6 +908,18 @@ background-color: transparent;
   border-radius: 70px;
 }
 
+.h2-cong-s-side-bar {
+  padding-top: 20p;
+  padding-left: 20px;
+  font-family: 'Snowinter', Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-size: 28px;
+  font-display: fallback; /* ТОЛКО ДЛЯ @font-face МГНОВЕННАЯ ПОДГРУЗКА ШРИФТА И ДР.ШРИФТОВ ЕСЛИ НЕТ, 
+УСТАНОВЛЕННОГО МНОЙ. Для шрифта задаётся очень короткий период блокировки 
+и короткий период подмены.https://developer.mozilla.org/ru/docs/Web/CSS/@font-face/font-display*/
+  color: blue;
+}
+
 /*Slider*/
 .sectionSlider {
   osition: absolute;
@@ -877,7 +942,7 @@ background-color: transparent;
   height: auto;
   top: 144px;
   left: 162px;
-  order: 10px double #0006cd;
+  order: 10px double #0006cd;              
   ackground-color: #ffc107;
   ox-shadow:0px 0px 30px 26px beige;
 }
@@ -905,7 +970,7 @@ background-color: transparent;
     height: 100%;
     opacity: 0;
     z-index: 1;
-  
+
     -webkit-transition: opacity 1s;
     -moz-transition: opacity 1s;
     -o-transition: opacity 1s;
@@ -1003,7 +1068,6 @@ slide:nth-of-type(7){
   width: 943px;
   height: 50px;
   background-color: #00000036;
-  
   font-family: 'Montserrat';
   font-size: 30px;
   font-weight: bold;
@@ -1017,10 +1081,12 @@ slide:nth-of-type(7){
   width: 600px;
   bottom: 350px;
   left: 96px;
-  
   font-family: 'Pacifico', cursive;
   font-size: 37px;
   font-weight: bold;
+  font-display: fallback; /* ТОЛЬКО ДЛЯ @font-face МГНОВЕННАЯ ПОДГРУЗКА ШРИФТА И ДР.ШРИФТОВ ЕСЛИ НЕТ, 
+УСТАНОВЛЕННОГО МНОЙ. Для шрифта задаётся очень короткий период блокировки 
+и короткий период подмены.https://developer.mozilla.org/ru/docs/Web/CSS/@font-face/font-display*/
   ont-style: italic;
   text-align: center;
   color: #36f482;
@@ -1030,20 +1096,40 @@ slide:nth-of-type(7){
   position: absolute; 
   bottom: 70px;
   left: 57px;
-  color: red;
+  color: #ff000063;
+  animation: fade 50s ease forwards;/*исчезновение текста*/
+}
+@keyframes fade {/*исчезновение текста*/
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.video__slides-2-5 {
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/image-bg.png');/*../images/image-bg.png https://www.davno.ru/assets/images/cards/big/noviy-god-2234.gif*/
+  background-size: cover;
+  object-fit: fill;/*расстягиает фото и видео на весь контейнер
+  https://msiter.ru/articles/kak-ispolzovat-object-fit-i-background-size-v-css*/
 }
 /*/SLIDER*/
 
-.video__slides-2-5 {
-width: 100%;
-height: 100%;
-background-image: url('../images/image-bg.png');
-background-size: cover;
-}
-
 /*PHOTO PAGE -3*/
 .photo-page {
- background-image: url('https://www.chitalnya.ru/upload3/435/f56a1bdcaefa1a422fa0b8eccd786382.gif'); 
+  background:linear-gradient(rgba(000, 00, 000, 15.5%), rgba(69, 25, 25, 0.0)),  
+  url("https://www.chitalnya.ru/upload3/435/f56a1bdcaefa1a422fa0b8eccd786382.gif"); /*linear-gradient(rgba(255, 255, 255, 0.7), rgba(0, 0, 0, 0.8)), 
+  Делается не картинке, а обёртке, в котором картинка*/
+  background-size: cover;
+  background-repeat: no-repeat;
+  ackground-image: url('https://www.chitalnya.ru/upload3/435/f56a1bdcaefa1a422fa0b8eccd786382.gif'); 
+  ackground: linear-gradient(180deg,rgba(0,0,0,0.9) 0%,rgba(0,0,0,0.1) 100%);/*зачётный*/
+  ackground: linear-gradient(180.12deg,#5883fd 46%,#FFC700 9%);/*хорош, чтобы делать градиент бэкграунду блока без фотки. Не знаю, если ему прописать rgba, то может и фотке подойдёт.*/  
 }
 
 .header-page-photo {
@@ -1062,7 +1148,7 @@ background-size: cover;
   display: flex;
   justify-content: space-around;
   lign-items: center;/*если фото разного размера, отключаем основному блоку центр
-  обёртке фото column делаем height:auto, фотке делаем width: 100%;height: 100%;
+  , обёртке фото Column делаем height:auto, фотке делаем width: 100%;height: 100%;
   и фотки растягиваются на всю длинну и ширину*/ 
    gap: 15px;
 }
@@ -1092,7 +1178,7 @@ background-size: cover;
 }
 
 .column {
-  float: left;
+  float: left; /*Обтекание по правому краю*/
   width: 25%;
   height: auto;
 }
@@ -1102,7 +1188,7 @@ background-size: cover;
   display: none;
   position: fixed;
   z-index: 1;
-  padding-top: 50px;
+  padding-top: 47px;
   left: 0;
   top: 0;
   width: 100%;
@@ -1217,12 +1303,13 @@ img.hover-shadow {
 
 /*PAGE GLOW 4*/
 .glow-page {
-  background-image: url('https://www.vrogue.co/top-featureds-i.pinimg.com/originals/ea/82/ec/ea82ec2b311e68340d2edf54380cef76.gif');
-  ox-shadow:
-  inset 0 47em 3em rgb(0 0 0 / 55%), 0 0 0 2px black,/*внетреннее затемнение боди*/
+  background-image: url('https://gifgive.com/wp-content/uploads/2021/12/blesk-nochnogo-neba-2.gif');/*https://99px.ru/sstorage/86/2015/08/image_86260815114430459781.gif https://gifgive.com/wp-content/uploads/2021/12/blesk-nochnogo-neba-2.gif https://www.vrogue.co/top-featureds-i.pinimg.com/originals/ea/82/ec/ea82ec2b311e68340d2edf54380cef76.gif*/
+  box-shadow:
+  inset 0 100em 0em rgb(0 0 0 / 30%), 0 0 0 2px black,/*внутреннее затемнение боди*/
    0.0em 0.0em 0em rgb(0 0 0 / 0%);/*внешняя тень боди. здесь она не нужна. 
    можно делать для фоток. смотреть оригинал - https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow*/
-  /*opacity:0;transition:.5s;*/
+   /*opacity:0;transition:.5s;*/
+  ackground: linear-gradient(180deg,rgba(0,0,0,0.9) 0%,rgba(0,0,0,0.1) 100%);/*проще, чем бокс-шедоу, но пока на фото не работает*/
 }
 
 .header-page-glow {
@@ -1240,6 +1327,21 @@ img.hover-shadow {
   /*transform: translateY(100px);*/
 }
 
+.img-sidebar-1-glow {
+  ransform:transition .5s;/* Для появления текста снизу Назначение анимации тексту - длительность, можно прописывать если не прописано в animation*/
+  animation: move-up 10s ease-in-out infinite; /* Для появления текста снизу Назначение анимации тексту */
+}
+
+/*Появление текста снизу*/
+@-webkit-keyframes move-up {
+  0% {
+    transform: translateY(100%); /* Начальное положение текста (скрыто внизу) */
+  }
+  100% {
+    transform: translateY(0); /* Конечное положение текста (поднято вверх)*/
+  }
+}
+
 /*СВЕТЯЩИЙСЯ ТЕКСТ*/
 .glow {
   isplay: inline-block;
@@ -1249,7 +1351,12 @@ img.hover-shadow {
   text-align: center;
   animation: glow 1s ease-in-out infinite alternate;
   font-family: 'Unbounded';
-  /*animation: move-up 10s ease-in-out infinite; /* Для появления текста снизу Назначение анимации тексту */
+  font-weight: 700;
+  font-display: fallback; /*ТОЛЬКО ДЛЯ @ font-face МГНОВЕННАЯ ПОДГРУЗКА ШРИФТА И ДР.ШРИФТОВ ЕСЛИ НЕТ, 
+УСТАНОВЛЕННОГО МНОЙ. Для шрифта задаётся очень короткий период блокировки 
+и короткий период подмены.https://developer.mozilla.org/ru/docs/Web/CSS/@font-face/font-display*/
+  /*transform:transition .5s;/* Для появления текста снизу Назначение анимации тексту - длительность*
+  animation: move-up 10s ease-in-out infinite; /* Для появления текста снизу Назначение анимации тексту */
 }
 
 @-webkit-keyframes glow {
@@ -1262,13 +1369,13 @@ img.hover-shadow {
   }
 }
 
-/*Появление текста снизу
-@keyframes move-up {
+/*Появление текста снизу*
+@-webkit-keyframes move-up {
   0% {
-    transform: translateY(100%); /* Начальное положение текста (скрыто внизу) *
+    transform: translateY(200%); /* Начальное положение текста (скрыто внизу) *
   }
   100% {
-    transform: translateY(0); /* Конечное положение текста (поднято вверх) *
+    transform: translateY(0); /* Конечное положение текста (поднято вверх) 
   }
 }*/
 
@@ -1289,10 +1396,10 @@ img.hover-shadow {
     animation-iteration-count: infinite;
     animation-timing-function: linear;*/
   cursor: pointe;
-  /*nimation-timing-function: linear;/*Линейная функция, анимация происходит равномерно на протяжении всего времени, без колебаний в скорости.*/
-  /*nimation-direction: alternate; /*движение элемента слева вправо, потом пропадает и снова появляется слева*
-  nimation-name: mymove;
-  nimation: mymove 75s infinite; /*-iteration-count регулируется быстрота и медлительность движения*/
+  /*animation-timing-function: linear;/*Линейная функция, анимация происходит равномерно на протяжении всего времени, без колебаний в скорости.*/
+  /*animation-direction: alternate; /*движение элемента слева вправо, потом пропадает и снова появляется слева*
+  animation-name: mymove;
+  animation: mymove 75s infinite; /*-iteration-count регулируется быстрота и медлительность движения*/
   /*animation-duration: 100s; /*регулируется быстрота и медлительность движения при включенном js*/
   /*transition: /*left 3s ease-in-out /*cubic-bezier(.65,.17,1,-0.08) 0s*/;/*можно использовать для движения анимации*/
   /*animation-delay: 500s;/*время через сколько запустится анимация*/
@@ -1319,6 +1426,10 @@ img.hover-shadow {
     }
   }
 
+  .footer__continer_content {
+    padding-bottom: 30p;
+  }
+
 
 
 /* Responsive */
@@ -1338,22 +1449,23 @@ img.hover-shadow {
 }
 
 @media screen and (max-width: 800px) {
-
+ html {min-width: 889p;}
 }
 
 /* Small: 576px - 767px 
 @media (max-width: 767px) {}*/
 
 @media screen and (max-width: 768px) {
-.continer {width: 720px;}
+ html {min-width: 889p;}
+.continer {max-width: 720px;}
 }
 
 @media screen and (max-width: 425px) {
-
+ html {min-width: 891p;}
 }
 
 @media screen and (max-width: 375px) {
-.continer {width: 320px;}
+.continer {max-width: 320px;}
 }
 
 /* Extra small: 0px (320px) - 575px
