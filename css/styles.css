@@ -37,7 +37,7 @@ North Pole: Этот шрифт вдохновлен сказочным миро
 */
 
 /*@font-face {
-  src: url("./fonts/Pacifico.ttf");нужно скачать шрифт в папку fonts, в моём проекте
+  src: url("fonts/Pacifico.ttf");нужно скачать шрифт в папку fonts, в моём проекте
   font-family: "Pacifico", cursive;
   font-weight: 400;
   font-style: normal;
@@ -47,7 +47,7 @@ North Pole: Этот шрифт вдохновлен сказочным миро
 и короткий период подмены. https://developer.mozilla.org/ru/docs/Web/CSS/@font-face/font-display
 }*/
 /*@font-face {КОД, КОГДА ШРИФТ СОХРАНЁН В ПАПКЕ, ЛЕЖАЩЕЙ В ПРОЕКТЕ
-src:url(./fonts/Yeseva.ttf);
+src:url(fonts/Yeseva.ttf);
 font-family:"Yeseva+One"
 }*/
 
@@ -65,7 +65,7 @@ src:url(https://mdn.github.io/css-examples/web-fonts/VeraSeBd.ttf)
      Подключён индекс.цсс с кодом для проверки шрифтов у пользователя на компе
 }*/
 
-/*@import url(./fonts/font.css); Если в файле стайлес.цсс прописать так, то с хеда
+/*@import url(fonts.css); Если в файле стайлес.цсс прописать так, то с хеда
 link к папкe fonts можно отключить*/
 
 @import url('https://fonts.googleapis.com/css?family=Unbounded');
@@ -704,6 +704,7 @@ a:-webkit-any-link {
     
 .h1-home-page{
   padding-top: 30p;
+  margin: 0;
   font-size: 120px;
   font-family: 'Unbounded', sans-serif;
   text-align: center;
@@ -737,6 +738,7 @@ a:-webkit-any-link {
 .glitch {
   position: relative;
   padding:30px;
+  margin: 0;
   color:#fff;
   font-family: 'Unbounded', sans-serif;
   font-size:100px;
@@ -1474,4 +1476,3 @@ img.hover-shadow {
 @media screen and (max-width: 320px) {
 
 }
-
